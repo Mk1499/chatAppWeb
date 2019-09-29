@@ -12,19 +12,19 @@ export default class App extends Component {
     render() {
 
 
-        return ( <
-            Router >
-            <
-            Route path = "/login"
-            component = { Login }
-            />  <
-            Route path = "/register"
-            component = { Registeration }
-            /> <
-            Route path = "/chat"
-            component = { Chat }
-            /> <
-            /Router >
+        return (<Router >
+            <Route exact path="/"
+                component={Login}
+            />
+            <Route path="/login"
+                component={Login}
+            />  
+            <Route path="/register"
+                component={Registeration}
+            />
+            <Route path="/chat"
+                component={Chat}
+            /> </Router >
         )
     }
 }

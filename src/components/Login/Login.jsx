@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "../style.css";
 import "../main";
 import logo from '../logo.jpg';
+
 export default class Login extends Component {
   constructor(props) {
     super(props);
@@ -10,9 +11,12 @@ export default class Login extends Component {
     this.state = {
       email: "",
       password: "",
-      error: false , 
+      error: false,
+      url: "https://mk14chatserver.herokuapp.com/login",
+      urlLocal: "http://192.168.1.115:3005/login"
 
     };
+    
   }
 
 
@@ -20,20 +24,21 @@ export default class Login extends Component {
 
     event.preventDefault();
     console.log("Email : ", this.state.email);
-    let url = 'https://mk14chatserver.herokuapp.com/login';
+    let url = this.state.urlLocal;
     return fetch(url, {
       method: 'POST',
-
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
+        "Access-Control-Allow-Origin": "*"
       },
 
       body: JSON.stringify({
         email: this.state.email,
         password: this.state.password
       }),
-    }).then(response => {
+    })
+    .then(response => {
       if (response.status === 200) {
         response.json()
           .then(response => {
@@ -41,9 +46,11 @@ export default class Login extends Component {
             this.props.history.push(`/chat`);
           })
 
-      } 
+      } else {
+        alert(response.status)
+      }
 
-    }).catch(err=> alert(err));
+    }).catch(err => alert(err));
   }
 
   validateForm() {
@@ -94,7 +101,7 @@ export default class Login extends Component {
                 </button>
                   </div>
                 </div>
-
+                <br />
                 <div className="text-center p-t-115">
                   <span className="txt1">
                     Don’t have an account?

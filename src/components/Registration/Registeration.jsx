@@ -20,8 +20,8 @@ export default class Registeration extends Component {
 
     addAccount = (event) => {
 
-        let url = "http://localhost:3005/addAccount";
-        // let url = "https://mk14chatserver.herokuapp.com/addAccount"
+        // let url = "http://localhost:3005/addAccount";
+        let url = "https://mk14chatserver.herokuapp.com/addAccount"
         event.preventDefault();
         if (this.state.password1 === this.state.password2)
         {
@@ -125,7 +125,7 @@ export default class Registeration extends Component {
                 </button>
                                     </div>
                                 </div>
-
+                                <br />
                                 <div className="text-center p-t-115">
                                     <span className="txt1">
                                         Already have an account?

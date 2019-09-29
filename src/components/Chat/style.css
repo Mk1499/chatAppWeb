@@ -3,7 +3,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: #2c3e50;
+    background: #e9ecef;
     font-family: "proxima-nova", "Source Sans Pro", sans-serif;
     font-size: 1em;
     letter-spacing: 0.1px;
@@ -20,11 +20,12 @@ p {
 #frame {
     /* width: 95%; */
     min-width: 360px;
-    max-width: 1000px;
+    /* max-width: 1000px; */
     height: 92vh;
     min-height: 300px;
     max-height: 720px;
     background: #E6EAEA;
+    /* margin-left: 15%; */
 }
 
 @media screen and (max-width: 360px) {
@@ -44,11 +45,14 @@ p {
     color: #f5f5f5;
     overflow: hidden;
     position: relative;
+    /* border-top-left-radius: 15px ;
+    border-bottom-left-radius: 15px; */
+    box-shadow: "1px 3px 1px #9E9E9E";
 }
 
 @media screen and (max-width: 735px) {
     #frame #sidepanel {
-        width: 58px;
+        /* width: 58px; */
         min-width: 58px;
     }
 }
@@ -169,7 +173,7 @@ p {
     visibility: hidden;
     width: 150px;
     margin: 70px 0 0 0;
-    border-radius: 6px;
+    /* border-radius: 6px; */
     z-index: 99;
     line-height: initial;
     background: #435f7a;
@@ -181,7 +185,7 @@ p {
 
 @media screen and (max-width: 735px) {
     #frame #sidepanel #profile .wrap #status-options {
-        width: 58px;
+        /* width: 58px; */
         margin-top: 57px;
     }
 }
@@ -436,6 +440,7 @@ p {
 #frame #sidepanel #contacts ul li.contact.active {
     background: #fad437;
     border-right: 5px solid #435f7a;
+    color:#435f7a !important;
 }
 
 #frame #sidepanel #contacts ul li.contact.active span.contact-status {
@@ -496,12 +501,18 @@ p {
 
 @media screen and (max-width: 735px) {
     #frame #sidepanel #contacts ul li.contact .wrap .meta {
-        display: none;
+        /* display: none; */
+    }
+    #frame #sidepanel #contacts ul li.contact .wrap .meta .name {
+        font-weight: 600;
+        margin-left: 24% ;
     }
 }
-
 #frame #sidepanel #contacts ul li.contact .wrap .meta .name {
     font-weight: 600;
+}
+#frame #sidepanel #contacts ul li.active .wrap .meta .name{
+    color : #243140 ; 
 }
 
 #frame #sidepanel #contacts ul li.contact .wrap .meta .preview {
@@ -515,6 +526,9 @@ p {
     -o-transition: 1s all ease;
     -webkit-transition: 1s all ease;
     transition: 1s all ease;
+}
+#frame #sidepanel #contacts ul li.active .wrap .meta .preview{
+    color : #243140;
 }
 
 #frame #sidepanel #contacts ul li.contact .wrap .meta .preview span {
@@ -569,7 +583,8 @@ p {
 }
 
 #frame #sidepanel #bottom-bar button:hover {
-    background: #435f7a;
+    background: #fad437;
+    color: #2c3e50;
 }
 
 #frame #sidepanel #bottom-bar button i {
@@ -839,3 +854,4 @@ p {
     color: #eee;
     /* font-size: 2rem; */
 }
+
