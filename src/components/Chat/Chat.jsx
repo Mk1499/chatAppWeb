@@ -8,7 +8,9 @@ import $ from 'jquery';
 import io from "socket.io-client";
 
 
-const baseURL = "http://192.168.1.115:3005/";
+// const baseURL = "http://192.168.1.115:3005/";
+const baseURL = "https://mk14chatserver.herokuapp.com/";
+
 const socket = io(baseURL);
 
 // const baseURL = "https://mk14chatserver.herokuapp.com/"; 
