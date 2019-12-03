@@ -451,6 +451,7 @@ p {
     width: 88%;
     margin: 0 auto;
     position: relative;
+    overflow: hidden
 }
 
 @media screen and (max-width: 735px) {
