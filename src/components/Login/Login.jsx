@@ -24,7 +24,7 @@ export default class Login extends Component {
 
     event.preventDefault();
     console.log("Email : ", this.state.email);
-    let url = this.state.urlLocal;
+    let url = this.state.url;
     return fetch(url, {
       method: 'POST',
       headers: {
